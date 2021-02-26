@@ -6,3 +6,4 @@
 11:20 - Add launch.json file and configure VSCode React Native debugger to correct port.
 1:00 - Continue doing research about React Native.
 1:35 - Fleshed out solution to emulator disconnect issue. 
+2:30 - Researching and working on building a wireframe.
