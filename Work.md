@@ -3,3 +3,4 @@
 10:15 - Worked through Android Studio instillation and configuration.
 10:45 - Got Pixel 3 Emulator working in BIOS.
 11:00 - Got App simulator functioning on my iPhone.
+11:20 - Add launch.json file and configure VSCode React Native debugger to correct port. 
