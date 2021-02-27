@@ -8,3 +8,4 @@
 1:35 - Fleshed out solution to emulator disconnect issue. 
 2:30 - Researching and working on building a wireframe.
 3:45 - Researching UI libraries that work well with Expo => share common theme between iOS and Android displays.
+4:10 - Installed React Native Paper - Appears to have a lot of useful documentation.
