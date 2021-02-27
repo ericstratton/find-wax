@@ -1,11 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, SafeAreaView } from 'react-native';
-import { Provider as PaperProvider } from 'react-native-paper'; // UI library //
+import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper'; // UI library //
 
 export default function App() {
 
   const handlePress = () => console.log("Text Pressed");
+
+  const theme = { // Test Theme //
+    ...DefaultTheme,
+    colors: {
+      ...DefaultTheme.colors,
+      primary: 'yellow',
+      accent: 'brown'
+    }
+  }
   
   const styles = StyleSheet.create({
     container: {
@@ -17,9 +26,9 @@ export default function App() {
   });
 
   return (
-    <PaperProvider>
+    <PaperProvider theme={theme}>
       <SafeAreaView style={styles.container}>
-        <Text numberOfLines={1} onPress={handlePress}>Open up App.js to start working on your app!</Text>
+        <Text numberOfLines={1} onPress={handlePress}>Hello E!</Text>
         <StatusBar style="auto" />
       </SafeAreaView>
     </PaperProvider>
