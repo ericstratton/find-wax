@@ -1,3 +1,7 @@
+Work Log:
+
+Date: 02/26/2021
+
 9:00 - Still researching React Native.
 9:25 - Decided to get started with Expo - simpler approach as suggested by React Native documentation.
 10:15 - Worked through Android Studio instillation and configuration.
