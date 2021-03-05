@@ -6,7 +6,7 @@ const fontConfig = {
     },
     medium: {
       fontFamily: 'sans-serif-medium',
-      fontWeigth: 'normal',
+      fontWeight: 'normal',
     },
     light: {
       fontFamily: "sans-serif-light",
