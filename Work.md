@@ -14,3 +14,8 @@ Date: 02/26/2021
 3:45 - Researching UI libraries that work well with Expo => share common theme between iOS and Android displays.
 4:10 - Installed React Native Paper - Appears to have a lot of useful documentation.
 4:35 - Might switch libraries to NativeBase because documentation is in JavaScript opposed to TypeScript with Native Paper.
+
+Date: 03//05/2021
+
+8:00 - Watched more tutorials.
+9:30 - Started working on welcome screen.
