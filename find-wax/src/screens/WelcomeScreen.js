@@ -3,10 +3,10 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 
 function WelcomeScreen() {
   return (
-    <View>
+    <View style={styles.page}>
       <View style={styles.logoContainer}>
         <Image style={styles.logo} source={require('./../../assets/logo.png')} />
-        <Text>LOADING: WelcomeScreen</Text>
+        <Text>LOADING</Text>
       </View>
     </View>
   );
@@ -15,13 +15,18 @@ function WelcomeScreen() {
 export default WelcomeScreen;
 
 const styles = StyleSheet.create({
+  page: {
+    flex: 1,
+    justifyContent: 'flex-end',
+  },
   logo: {
+    top: 100,
     width: 300,
-    height: 300
+    height: 450
   },
   logoContainer: {
     position: 'relative',
-    top: 70,
+    bottom: 250,
     alignItems: 'center'
   }
 })
