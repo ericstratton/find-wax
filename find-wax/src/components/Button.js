@@ -5,22 +5,22 @@ import { Button } from 'react-native-paper';
 function AppButton() {
   return (
     <Button style={styles.button}>
-      <Text style={styles.Text}>{buttonText}</Text>
+      <Text style={styles.Text}>Button</Text>
     </Button>
   );
 }
 
 const styles = StyleSheet.create({
   button: {
-    borderRadius: 25,
+    borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
-    width: '20%',
-    marginVertical: 10
+    width: '100%',
+    height: 70,
+    marginVertical: 20
   },
   text: {
     fontSize: 20,
-    textTransform: 'uppercase',
     fontWeight: 'bold'
   }
 });
