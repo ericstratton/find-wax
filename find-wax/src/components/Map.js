@@ -3,6 +3,7 @@ import { View, StyleSheet, Dimensions } from 'react-native';
 import MapView from 'react-native-maps';
 
 
+
 function Map() {
   return (
     <>
@@ -16,11 +17,14 @@ function Map() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center'
+    backgroundColor: 'grey',
+    justifyContent: 'center',
+    alignContent: 'center',
   },
   map: {
-    width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height
+    flex: 0.5,
+    width: 300,
+    height: 100
   }
 })
 
