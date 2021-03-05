@@ -7,7 +7,7 @@ function WelcomeScreen() {
     <View style={styles.background}>
       <View style={styles.logoContainer}>
         <Image style={styles.logo} source={require('./../../assets/logo.png')} />
-        <Text>LOADING</Text>
+        <Text>WELCOME</Text>
       </View>
       <View style={styles.buttonContainer}>
         <Button title='Home' />
