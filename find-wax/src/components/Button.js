@@ -1,11 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text } from 'react-native';
-import { Button } from 'react-native-paper';
+import { StyleSheet, Text, Button } from 'react-native';
+// import { Button } from 'react-native';
 
 function AppButton() {
   return (
-    <Button style={styles.button}>
-      <Text style={styles.Text}>Button</Text>
+    <Button style={styles.button}
+    title="button">
     </Button>
   );
 }
@@ -13,6 +13,7 @@ function AppButton() {
 const styles = StyleSheet.create({
   button: {
     borderRadius: 10,
+    color: 'blue',
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
