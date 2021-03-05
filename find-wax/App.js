@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, SafeAreaView } from 'react-native';
-import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper'; // UI library //
+import { Provider as PaperProvider } from 'react-native-paper'; // UI library //
+import theme from './src/custom-properties/Theme'; 
 import AppControl from './src/components/AppControl';
 import Map from './src/components/Map';
 
@@ -13,21 +14,12 @@ export default function App() {
     <PaperProvider theme={theme}>
       <SafeAreaView style={styles.container}>
         {/* <Text numberOfLines={1} onPress={handlePress}>Hello Everyone!</Text> */}
-        <AppControl />
-        {/* <Map /> */}
+        {/* <AppControl /> */}
+        <Map />
         <StatusBar style="auto" />
       </SafeAreaView>
     </PaperProvider>
   );
-}
-
-const theme = { // Test Theme //
-  ...DefaultTheme,
-  colors: {
-    ...DefaultTheme.colors,
-    primary: 'yellow',
-    accent: 'brown'
-  }
 }
 
 const styles = StyleSheet.create({
