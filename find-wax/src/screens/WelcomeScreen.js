@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
+import colors from '../config/colors';
 import Button from './../components/Button';
 
 function WelcomeScreen() {
@@ -20,7 +21,8 @@ export default WelcomeScreen;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    // flex: 1,
+    backgroundColor: colors.primary,
     alignItems: 'center',
     justifyContent: 'flex-end',
   },
@@ -33,10 +35,9 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   buttonContainer: {
-    color: '#207178',
     alignItems: 'center',
     padding: 20,
-    width: '100%'
+    width: '100%',
   }
 })
 

@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
+import Button from './../components/Button'
 import Map from './../components/Map';
+
+import colors from '../config/colors';
 
 const Screen = () => {
   return (
@@ -11,20 +14,23 @@ const Screen = () => {
       <View style={styles.mapContainer} >
         <Map />
       </View>
+      <View>
+        <Button />
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    backgroundColor: colors.primary,
+    // flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
     // alignContent: 'center', 
     // flexWrap: 'wrap'
   },
   mapContainer: {
-    flex: 1,
     top: 150
   }
 })
