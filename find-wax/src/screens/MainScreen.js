@@ -4,7 +4,7 @@ import Map from './../components/Map';
 
 const Screen = () => {
   return (
-    <View style={styles.body}>
+    <View style={styles.container}>
       <View>
         <Text>Home Screen</Text>
       </View>
@@ -16,11 +16,11 @@ const Screen = () => {
 };
 
 const styles = StyleSheet.create({
-  body: {
+  container: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    // alignContent: 'center',
+    // alignContent: 'center', 
     // flexWrap: 'wrap'
   },
   mapContainer: {
