@@ -6,25 +6,16 @@ import MapView from 'react-native-maps';
 
 function Map() {
   return (
-    <>
-      <View style={styles.container}>
-        <MapView style={styles.map} />
-      </View>
-    </>
+    
+    <MapView style={styles.map} />
+
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'grey',
-    justifyContent: 'center',
-    alignContent: 'center',
-  },
   map: {
-    flex: 0.5,
     width: 300,
-    height: 100
+    height: 6000
   }
 })
 
