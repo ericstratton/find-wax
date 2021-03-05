@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, SafeAreaView } from 'react-native';
+import { StyleSheet, SafeAreaView } from 'react-native';
 import { Provider as PaperProvider } from 'react-native-paper';
 import theme from './src/custom-properties/Theme';
 import MainScreen from './src/screens/MainScreen';
@@ -12,9 +12,9 @@ export default function App() {
 
   return (
     <PaperProvider theme={theme}>
-      <SafeAreaView>
-        <WelcomeScreen />
-        {/* <MainScreen />  */}
+      <SafeAreaView  >
+        {/* <WelcomeScreen /> */}
+        <MainScreen /> 
         <StatusBar style="auto" />
       </SafeAreaView>
     </PaperProvider>
