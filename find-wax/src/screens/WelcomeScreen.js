@@ -4,7 +4,7 @@ import Button from './../components/Button';
 
 function WelcomeScreen() {
   return (
-    <View style={styles.background}>
+    <View style={styles.container}>
       <View style={styles.logoContainer}>
         <Image style={styles.logo} source={require('./../../assets/logo.png')} />
         <Text>WELCOME</Text>
@@ -19,7 +19,7 @@ function WelcomeScreen() {
 export default WelcomeScreen;
 
 const styles = StyleSheet.create({
-  background: {
+  container: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'flex-end',
