@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, Dimensions } from 'react-native';
 import colors from '../config/colors';
-import Button from './../components/Button';
+import AppButton from '../components/AppButton';
 
 function WelcomeScreen() {
   return (
@@ -11,7 +11,7 @@ function WelcomeScreen() {
         <Text style={styles.text}>WELCOME</Text>
       </View>
       <View style={styles.buttonContainer}>
-        <Button title='Home' />
+        <AppButton title='Enter' onPress={() => console.log('tapped')}/>
       </View>
     </View>
   );
