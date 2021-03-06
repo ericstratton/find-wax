@@ -35,7 +35,9 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap'
   },
   mapContainer: {
-    bottom: 50
+    bottom: 50,
+    borderWidth: 10,
+    borderRadius: 10,
   },
   textContainer: {
     bottom: 200,
