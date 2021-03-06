@@ -38,9 +38,13 @@ const styles = StyleSheet.create({
     bottom: 50,
     borderWidth: 10,
     borderRadius: 10,
+    shadowColor: 'grey',
+    shadowOffset: { width: 5, heigth: 5 },
+    shadowOpacity: 0.5,
+    elevation: 20
   },
   textContainer: {
-    bottom: 200,
+    bottom: 185,
   }
 })
 
