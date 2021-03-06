@@ -39,10 +39,12 @@ const styles = StyleSheet.create({
     bottom: 150,
     alignItems: 'center',
     padding: 20,
-    width: '100%',
+    width: '80%',
   },
   text: {
-    bottom: 150,
+    bottom: 220,
+    fontSize: 20,
+    fontWeight: 'bold',
   }
 })
 
