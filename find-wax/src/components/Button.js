@@ -18,12 +18,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: '100%',
     height: 70,
-    marginVertical: 700
-  },
-  text: {
+    marginVertical: 700,
     fontSize: 20,
-    fontWeight: 'bold'
-  }
-});
+    fontWeight: 'bold',
+    textTransform: 'uppercase',
+  }});
 
 export default AppButton;
