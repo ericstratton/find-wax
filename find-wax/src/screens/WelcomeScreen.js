@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, Dimensions } from 'react-native';
 import colors from '../config/colors';
 import Button from './../components/Button';
 
@@ -8,7 +8,7 @@ function WelcomeScreen() {
     <View style={styles.container}>
       <View style={styles.logoContainer}>
         <Image style={styles.logo} source={require('./../../assets/logo.png')} />
-        <Text>WELCOME</Text>
+        <Text style={styles.text}>WELCOME</Text>
       </View>
       <View style={styles.buttonContainer}>
         <Button title='Home' />
@@ -21,23 +21,28 @@ export default WelcomeScreen;
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
     backgroundColor: colors.primary,
+    // flex: 1,
+    height: Dimensions.get('screen').height,
     alignItems: 'center',
     justifyContent: 'flex-end',
   },
   logo: {
-    top: 100,
     width: 300,
     height: 450
   },
   logoContainer: {
+    bottom: 150,
     alignItems: 'center'
   },
   buttonContainer: {
+    bottom: 150,
     alignItems: 'center',
     padding: 20,
     width: '100%',
+  },
+  text: {
+    bottom: 150,
   }
 })
 
