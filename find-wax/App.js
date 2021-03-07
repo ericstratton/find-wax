@@ -3,24 +3,20 @@ import React from 'react';
 import { SafeAreaView, StyleSheet, Platform } from 'react-native';
 // import { Provider as PaperProvider } from 'react-native-paper';
 // import theme from './src/config/theme';
+import Screen from './src/components/Screen';
 import MainScreen from './src/screens/MainScreen';
 import WelcomeScreen from './src/screens/WelcomeScreen';
-import Constants from 'expo-constants';
+
 
 
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.screen} >
-      {/* <WelcomeScreen /> */}
-      <MainScreen /> 
+    <Screen>
+      <WelcomeScreen />
+      {/* <MainScreen />  */}
       <StatusBar style="auto" />
-    </SafeAreaView>
+    </Screen>
   );
 }
 
-const styles = StyleSheet.create({
-  screen: {
-    paddingTop: Constants.statusBarHeight,
-  }
-})
