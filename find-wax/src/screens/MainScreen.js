@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Dimensions } from 'react-native';
+import Screen from './../components/Screen';
 import AppButton from '../components/AppButton'
 import Map from './../components/Map';
 
 import colors from '../config/colors';
 
-const Screen = () => {
+const MainScreen = () => {
   return (
     <View style={styles.container}>
       <View style={styles.textContainer}>
@@ -50,4 +51,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default Screen;
+export default MainScreen;
