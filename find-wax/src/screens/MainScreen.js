@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Dimensions } from 'react-native';
-import Button from './../components/Button'
+import AppButton from '../components/AppButton'
 import Map from './../components/Map';
 
 import colors from '../config/colors';
@@ -15,7 +15,7 @@ const Screen = () => {
         <Map />
       </View>
       <View style={styles.buttonContainer}>
-        <Button />
+        <AppButton title='search' />
       </View>
     </View>
   );
@@ -23,7 +23,10 @@ const Screen = () => {
 
 const styles = StyleSheet.create({
   buttonContainer: {
-    top: -10,
+    bottom: -100,
+    alignItems: 'center',
+    padding: 20,
+    width: '80%',
   },
   container: {
     backgroundColor: colors.primary,
