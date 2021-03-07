@@ -5,7 +5,7 @@ import colors from './../config/colors';
 export default function ReusableSeparator() {
   return (
     <View style={styles.separator}/>
-  )
+  );
 }
 
 
@@ -15,5 +15,4 @@ const styles = StyleSheet.create({
     height: 1,
     backgroundColor: colors.black,
   }
-})
- 
+});
