@@ -30,7 +30,6 @@ const styles = StyleSheet.create({
   },
   container: {
     backgroundColor: colors.primary,
-    // flex: 1,
     height: Dimensions.get('screen').height,
     alignItems: 'center',
     justifyContent: 'center',
@@ -39,7 +38,7 @@ const styles = StyleSheet.create({
   },
   mapContainer: {
     bottom: 50,
-    borderWidth: 10,
+    borderWidth: 5,
     borderRadius: 10,
     shadowColor: 'grey',
     shadowOffset: { width: 5, heigth: 5 },
@@ -47,7 +46,7 @@ const styles = StyleSheet.create({
     elevation: 20
   },
   textContainer: {
-    bottom: 185,
+    bottom: 170,
   }
 })
 
