@@ -23,13 +23,11 @@ const MainScreen = () => {
 
 const styles = StyleSheet.create({
   buttonContainer: {
-    bottom: -100,
     alignItems: 'center',
     padding: 20,
     width: '80%',
   },
   container: {
-    backgroundColor: colors.primary,
     height: Dimensions.get('screen').height,
     alignItems: 'center',
     justifyContent: 'center',
@@ -37,7 +35,7 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap'
   },
   mapContainer: {
-    bottom: 50,
+    bottom: 175,
     borderWidth: 5,
     borderRadius: 10,
     shadowColor: 'grey',
