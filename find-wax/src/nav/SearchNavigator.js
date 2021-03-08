@@ -1,8 +1,9 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
 import WelcomeScreen from './../screens/WelcomeScreen';
-import MainScreen from '../screens/MainScreen';
+import LoginScreen from '../screens/LoginScreen';
 import colors from '../config/colors';
+
 
 const Stack = createStackNavigator();
 
@@ -17,7 +18,7 @@ const SearchNavigator = () => (
       component={WelcomeScreen}
       options={{ headerShown: false }}
     />
-    <Stack.Screen name="Home" component={MainScreen}/>
+    <Stack.Screen name="Login" component={LoginScreen}/>
   </Stack.Navigator>
 )
 
