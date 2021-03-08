@@ -30,7 +30,9 @@ function LoginScreen(props) {
 }
 
 const styles = StyleSheet.create({
-  container: {}
+  container: {
+    padding: 10,
+  }
 });
 
 export default LoginScreen;
