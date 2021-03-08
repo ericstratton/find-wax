@@ -1,11 +1,12 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, Dimensions } from 'react-native';
+import Screen from './../components/Screen';
 import colors from '../config/colors';
 import AppButton from '../components/AppButton';
 
 function WelcomeScreen() {
   return (
-    <View style={styles.container}>
+    <Screen style={styles.container}>
       <View style={styles.logoContainer}>
         <Image style={styles.logo} source={require('./../../assets/logo.png')} />
         <Text style={styles.text}>WELCOME</Text>
@@ -13,7 +14,7 @@ function WelcomeScreen() {
       <View style={styles.buttonContainer}>
         <AppButton title='Enter' onPress={() => console.log('tapped')}/>
       </View>
-    </View>
+    </Screen>
   );
 }
 

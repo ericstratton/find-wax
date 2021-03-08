@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
-import { FlatList } from 'react-native';
+import { ActivityIndicator, StyleSheet, Text, FlatList } from 'react-native';
+import Screen from './../components/Screen';
 import Card from '../components/Card';
 import Button from './../components/AppButton';
 import shopsApi from './../api/shops';
@@ -16,7 +16,7 @@ export default function ShopsScreen() {
   }, []);
 
   return (
-    <View style={styles.container}>
+    <Screen style={styles.container}>
       {error && (<>
         <Text>Couldn't retrieve data.</Text>
         <Button title="Retry" onPress={loadShops}/>
@@ -31,7 +31,7 @@ export default function ShopsScreen() {
             subTitle={item.phone} />
         )} />
       <Text></Text>
-    </View>
+    </Screen>
   )
 }
 
@@ -41,6 +41,3 @@ const styles = StyleSheet.create({
     backgroundColor: colors.lightGrey
   }
 })
-
-// object['businesses'][0][]
-// console.log(shops.businesses[0].name)

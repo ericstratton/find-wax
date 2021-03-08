@@ -8,7 +8,7 @@ import colors from '../config/colors';
 
 const MainScreen = () => {
   return (
-    <View style={styles.container}>
+    <Screen style={styles.container}>
       <View style={styles.textContainer}>
         <Text>Home Screen</Text>
       </View>
@@ -18,7 +18,7 @@ const MainScreen = () => {
       <View style={styles.buttonContainer}>
         <AppButton title='search' />
       </View>
-    </View>
+    </Screen>
   );
 };
 
