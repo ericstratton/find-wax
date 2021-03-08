@@ -10,7 +10,6 @@ const MainScreen = () => {
   return (
     <Screen style={styles.container}>
       <View style={styles.textContainer}>
-        <Text>Home Screen</Text>
       </View>
       <View style={styles.mapContainer} >
         <Map />
