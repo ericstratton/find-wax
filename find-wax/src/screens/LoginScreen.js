@@ -9,11 +9,9 @@ function LoginScreen(props) {
 
   return (
     <Screen style={styles.container}>
-
       <Formik
         initialValues={{ email: '', password: '' }}
-        onSubmit={values => console.log(values)}
-      >
+        onSubmit={values => console.log(values)} >
         { ({ handleChange, handleSubmit }) => (
           <>
             <TextInput
