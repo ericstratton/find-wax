@@ -30,7 +30,6 @@ export default function ShopsScreen() {
             title={item.name}
             subTitle={item.phone} />
         )} />
-      <Text></Text>
     </Screen>
   )
 }
