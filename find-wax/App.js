@@ -7,13 +7,14 @@ import ShopsScreen from './src/screens/ShopsScreen';
 
 import { NavigationContainer } from '@react-navigation/native';
 import SearchNavigator from './src/nav/SearchNavigator';
+import AppNavigator from './src/nav/AppNavigator';
 
 
 
 export default function App() {
   return (
     <NavigationContainer>
-      <SearchNavigator />
+      <AppNavigator />
     </NavigationContainer>
   );
 }
