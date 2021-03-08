@@ -4,7 +4,7 @@ import Screen from './../components/Screen';
 import colors from '../config/colors';
 import AppButton from '../components/AppButton';
 
-function WelcomeScreen() {
+function WelcomeScreen({ navigation }) {
   return (
     <Screen style={styles.container}>
       <View style={styles.logoContainer}>
@@ -12,7 +12,7 @@ function WelcomeScreen() {
         <Text style={styles.text}>WELCOME</Text>
       </View>
       <View style={styles.buttonContainer}>
-        <AppButton title='Enter' onPress={() => console.log('tapped')}/>
+        <AppButton title='Enter' onPress={() => navigation.navigate("Home")}/>
       </View>
     </Screen>
   );
