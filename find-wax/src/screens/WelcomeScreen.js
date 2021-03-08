@@ -12,7 +12,7 @@ function WelcomeScreen({ navigation }) {
         <Text style={styles.text}>WELCOME</Text>
       </View>
       <View style={styles.buttonContainer}>
-        <AppButton title='Enter' onPress={() => navigation.navigate("Home")}/>
+        <AppButton title='Login' onPress={() => navigation.navigate("Login")}/>
       </View>
     </Screen>
   );
