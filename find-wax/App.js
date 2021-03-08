@@ -1,22 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { SafeAreaView, StyleSheet, Platform } from 'react-native';
 // import { Provider as PaperProvider } from 'react-native-paper';
 // import theme from './src/config/theme';
-import Screen from './src/components/Screen';
 import MainScreen from './src/screens/MainScreen';
 import WelcomeScreen from './src/screens/WelcomeScreen';
+import ShopsScreen from './src/screens/ShopsScreen';
+import { SafeAreaView } from 'react-native';
 
 
 
 
 export default function App() {
   return (
-    <Screen>
-      <WelcomeScreen />
+    <SafeAreaView>
+      {/* <WelcomeScreen /> */}
       {/* <MainScreen />  */}
+      <ShopsScreen />
       <StatusBar style="auto" />
-    </Screen>
+    </SafeAreaView>
   );
 }
 
