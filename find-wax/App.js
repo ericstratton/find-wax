@@ -6,7 +6,7 @@ import WelcomeScreen from './src/screens/WelcomeScreen';
 import ShopsScreen from './src/screens/ShopsScreen';
 
 import { NavigationContainer } from '@react-navigation/native';
-import SearchNavigator from './src/nav/SearchNavigator';
+import AuthNavigator from './src/nav/AuthNavigator';
 import AppNavigator from './src/nav/AppNavigator';
 
 
@@ -14,7 +14,7 @@ import AppNavigator from './src/nav/AppNavigator';
 export default function App() {
   return (
     <NavigationContainer>
-      <AppNavigator />
+      <AuthNavigator />
     </NavigationContainer>
   );
 }
