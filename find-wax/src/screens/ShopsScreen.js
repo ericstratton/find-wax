@@ -27,6 +27,7 @@ export default function ShopsScreen() {
         keyExtractor={shop => shop.id.toString()}
         renderItem={({ item }) => (
           <Card
+            imageUrl={item.image_url}
             title={item.name}
             subTitle={item.phone} />
         )} />
