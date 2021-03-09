@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { ActivityIndicator, StyleSheet, Text, FlatList } from 'react-native';
+import { ActivityIndicator, StyleSheet, Text, View, FlatList } from 'react-native';
 import Screen from './../components/Screen';
 import Card from '../components/Card';
 import Button from './../components/AppButton';
@@ -22,15 +22,17 @@ export default function ShopsScreen() {
         <Button title="Retry" onPress={loadShops}/>
       </>)}
       <ActivityIndicator animating={loading} size='large' />
-      <FlatList 
-        data={shops.businesses}
-        keyExtractor={shop => shop.id.toString()}
-        renderItem={({ item }) => (
-          <Card
-            imageUrl={item.image_url}
-            title={item.name}
-            subTitle={item.phone} />
-        )} />
+      <View style={styles.flatListContainer}>
+        <FlatList 
+          data={shops.businesses}
+          keyExtractor={shop => shop.id.toString()}
+          renderItem={({ item }) => (
+            <Card
+              imageUrl={item.image_url}
+              title={item.name}
+              subTitle={item.phone} />
+          )} />
+      </View>
     </Screen>
   )
 }
@@ -39,5 +41,8 @@ const styles = StyleSheet.create({
   container: {
     padding: 20,
     backgroundColor: colors.white,
+  },
+  flatListContainer: {
+    marginBottom: 120,
   }
 })
