@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
+
 
 
 
@@ -24,8 +25,8 @@ function Map() {
 
 const styles = StyleSheet.create({
   map: {
-    width: 350,
-    height: 350
+    height: Dimensions.get('window').height,
+    width: Dimensions.get('window').width,
   },
   marker: {
     width: '100%',
