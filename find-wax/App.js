@@ -14,7 +14,8 @@ import AppNavigator from './src/nav/AppNavigator';
 export default function App() {
   return (
     <NavigationContainer>
-      <AuthNavigator />
+      {/* <AuthNavigator /> */}
+      <AppNavigator />
     </NavigationContainer>
   );
 }
