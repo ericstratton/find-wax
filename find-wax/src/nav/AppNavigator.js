@@ -15,7 +15,7 @@ const AppNavigator = () => (
     tabBarOptions={{
       activeBackgroundColor: colors.primary,
       activeTintColor: colors.white,
-      inactiveBackgroundColor: colors.primary,
+      // inactiveBackgroundColor: colors.primary,
       inactiveTintColor: colors.secondary
     }} >
     <Tab.Screen name="Shops" component={ShopsScreen} 
