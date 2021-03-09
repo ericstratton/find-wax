@@ -7,7 +7,7 @@ function Card({ imageUrl, title, subTitle }) {
     <View style={styles.card}>
       <Image style={styles.image} source={{ uri: imageUrl }} />
       <View style={styles.cardText}>
-        <Text>{title}</Text>
+        <Text style={styles.title}>{title}</Text>
         <Text>{subTitle}</Text>
       </View>
     </View>
@@ -27,6 +27,10 @@ const styles = StyleSheet.create({
   image: {
     width: '100%',
     height: 150,
+  },
+  title: {
+    fontSize: 16,
+    fontWeight: 'bold',
   }
 })
 export default Card;
