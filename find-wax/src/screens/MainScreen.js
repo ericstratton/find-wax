@@ -14,9 +14,9 @@ const MainScreen = () => {
       <View style={styles.mapContainer} >
         <Map />
       </View>
-      <View style={styles.buttonContainer}>
-        <AppButton title='search' />
-      </View>
+      {/* <View style={styles.buttonContainer}> */}
+        {/* <AppButton title='search' /> */}
+      {/* </View> */}
     </Screen>
   );
 };
@@ -35,13 +35,11 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap'
   },
   mapContainer: {
-    bottom: 175,
-    borderWidth: 5,
-    borderRadius: 10,
+    bottom: 25,
+    elevation: 20,
     shadowColor: colors.lightGrey,
     shadowOffset: { width: 5, heigth: 5 },
     shadowOpacity: 0.5,
-    elevation: 20
   },
   textContainer: {
     bottom: 170,
