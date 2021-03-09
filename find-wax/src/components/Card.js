@@ -15,7 +15,7 @@ function Card({ imageUrl, title, subTitle }) {
 const styles = StyleSheet.create({
   card: {
     borderRadius: 10,
-    backgroundColor: colors.white,
+    backgroundColor: colors.primary,
     marginVertical: 10,
     overflow: 'hidden',
   },
