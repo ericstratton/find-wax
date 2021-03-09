@@ -38,6 +38,6 @@ export default function ShopsScreen() {
 const styles = StyleSheet.create({
   container: {
     padding: 20,
-    backgroundColor: colors.lightGrey
+    backgroundColor: colors.white,
   }
 })
