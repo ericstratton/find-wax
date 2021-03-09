@@ -6,8 +6,10 @@ function Card({ imageUrl, title, subTitle }) {
   return (
     <View style={styles.card}>
       <Image style={styles.image} source={{ uri: imageUrl }} />
-      <Text>{title}</Text>
-      <Text>{subTitle}</Text>
+      <View style={styles.cardText}>
+        <Text>{title}</Text>
+        <Text>{subTitle}</Text>
+      </View>
     </View>
   )
 }
@@ -18,6 +20,9 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary,
     marginVertical: 10,
     overflow: 'hidden',
+  },
+  cardText: {
+    padding: 10,
   },
   image: {
     width: '100%',
