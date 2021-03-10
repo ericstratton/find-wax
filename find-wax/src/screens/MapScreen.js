@@ -63,8 +63,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignSelf: 'flex-start',
     backgroundColor: colors.white,
-    borderRadius: 6,
-    borderWidth: 0.2,
+    borderRadius: 20,
     padding: 15,
   },  
   bubbleText: {
