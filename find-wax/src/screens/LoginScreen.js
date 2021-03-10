@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
+
+import { signIn } from './../api/auth';
 import AppButton from '../components/AppButton';
 import Screen from './../components/Screen';
 
@@ -11,13 +13,13 @@ const validationSchema = Yup.object().shape({
   password: Yup.string().required().label("Password")
 })
 
-function LoginScreen(props) {
+function LoginScreen() {
 
   return (
     <Screen style={styles.container}>
       <Formik
         initialValues={{ email: '', password: '' }}
-        onSubmit={values => console.log(values)} 
+        onSubmit={values => signIn(values)} 
         validationSchema={validationSchema} >
         { ({ handleChange, handleSubmit, errors }) => (
           <>
