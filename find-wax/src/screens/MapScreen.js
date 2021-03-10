@@ -24,7 +24,13 @@ const MapScreen = () => {
           <Button title="Retry" onPress={loadShops}/>
         </>)}
         <ActivityIndicator animating={loading} size='large' />
-        <MapView style={styles.map}> 
+        <MapView style={styles.map}
+          initialRegion={{
+            latitude: 45.520421,
+            longitude: -122.668319,
+            latitudeDelta: 0.07,
+            longitudeDelta: 0.15, 
+            }}> 
           { shops.businesses  &&
             shops.businesses.map((x, i) => (
               <Marker 
@@ -33,6 +39,7 @@ const MapScreen = () => {
                   longitude: x.coordinates.longitude
                   }}
                   image={require('./../../assets/custom-map-marker.png')}
+                  identifier={x.id}
                   key={i} />
             )) }
         </MapView>
