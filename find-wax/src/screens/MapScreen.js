@@ -1,13 +1,11 @@
 import React, { useEffect } from 'react';
-import { ActivityIndicator, Dimensions, StyleSheet, Text, View  } from 'react-native';
+import { ActivityIndicator, Dimensions, StyleSheet, Text, View } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
+
 import Screen from '../components/Screen';
-import AppButton from '../components/AppButton'
-import Map from '../components/Map';
-import CustomMarker from '../components/CustomMarker';
 import shopsApi from './../api/shops';
 import useApi from './../hooks/useApi';
-import colors from '../config/colors';
+
 
 
 const MapScreen = () => {
@@ -26,9 +24,8 @@ const MapScreen = () => {
           <Button title="Retry" onPress={loadShops}/>
         </>)}
         <ActivityIndicator animating={loading} size='large' />
-        
         <MapView style={styles.map}> 
-          { (shops.businesses != undefined) ?
+          { shops.businesses  &&
             shops.businesses.map((x, i) => (
               <Marker 
                   coordinate={{
@@ -37,10 +34,7 @@ const MapScreen = () => {
                   }}
                   image={require('./../../assets/custom-map-marker.png')}
                   key={i} />
-              // <Text>{x.coordinates.latitude}</Text>
-              // <Text>{x.coordinates.longitude}</Text>
-            ))
-          : <ActivityIndicator animating={loading} size='large' /> }
+            )) }
         </MapView>
       
       </View>
