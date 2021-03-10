@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { ActivityIndicator, Dimensions, StyleSheet, Text, View } from 'react-native';
-import MapView, { Marker } from 'react-native-maps';
+import MapView, { Marker, Callout } from 'react-native-maps';
 
 import Screen from '../components/Screen';
+import colors from '../config/colors';
 import shopsApi from './../api/shops';
 import useApi from './../hooks/useApi';
 
@@ -34,13 +35,21 @@ const MapScreen = () => {
           { shops.businesses  &&
             shops.businesses.map((x, i) => (
               <Marker 
-                  coordinate={{
-                  latitude: x.coordinates.latitude, 
-                  longitude: x.coordinates.longitude
-                  }}
-                  image={require('./../../assets/custom-map-marker.png')}
-                  identifier={x.id}
-                  key={i} />
+                coordinate={{
+                latitude: x.coordinates.latitude, 
+                longitude: x.coordinates.longitude
+                }}
+                image={require('./../../assets/custom-map-marker.png')}
+                identifier={x.id}
+                key={i} >
+                  <Callout tooltip>
+                    <View>
+                      <View style={styles.bubble}>
+                        <Text style={styles.bubbleText}>{x.name}</Text>
+                      </View>
+                    </View>
+                  </Callout>
+              </Marker>
             )) }
         </MapView>
       
@@ -50,6 +59,18 @@ const MapScreen = () => {
 };
 
 const styles = StyleSheet.create({
+  bubble: {
+    flexDirection: 'row',
+    alignSelf: 'flex-start',
+    backgroundColor: colors.white,
+    borderRadius: 6,
+    borderWidth: 0.2,
+    padding: 15,
+  },  
+  bubbleText: {
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
   buttonContainer: {
     alignItems: 'center',
     padding: 20,
