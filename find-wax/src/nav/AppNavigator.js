@@ -2,7 +2,7 @@ import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 
-import MainScreen from '../screens/MainScreen';
+import MapScreen from '../screens/MapScreen';
 import ShopsScreen from '../screens/ShopsScreen';
 import colors from '../config/colors';
 
@@ -18,15 +18,19 @@ const AppNavigator = () => (
       // inactiveBackgroundColor: colors.primary,
       inactiveTintColor: colors.secondary
     }} >
-    <Tab.Screen name="Shops" component={ShopsScreen} 
+      <Tab.Screen 
+        name="Map" 
+        component={MapScreen} 
+        options={{
+          tabBarIcon: ({ color, size }) => 
+            <MaterialCommunityIcons name="map" color={color} size={size} />
+        }}/>
+    <Tab.Screen 
+      name="Shops" 
+      component={ShopsScreen} 
       options={{
         tabBarIcon: ({ color, size }) => 
           <MaterialCommunityIcons name="shopping" color={color} size={size} />
-      }}/>
-    <Tab.Screen name="Home" component={MainScreen} 
-      options={{
-        tabBarIcon: ({ color, size }) => 
-          <MaterialCommunityIcons name="home" color={color} size={size} />
       }}/>
   </Tab.Navigator>
 )
