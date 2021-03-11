@@ -11,7 +11,7 @@ import AuthContext from './src/auth/context';
 
 
 export default function App() {
-  const [user, setUser] = useState()
+  const [currentUser, setCurrentUser] = useState(AuthContext)
 
   if(!firebase.apps.length) {
     console.log('Connected to Firebase');
@@ -20,16 +20,16 @@ export default function App() {
 
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-      setUser(user);
+      setCurrentUser(user);
     } else {
       console.log("Not working!");
     }
   });
 
   return (
-    <AuthContext.Provider value={{ user, setUser }}>
+    <AuthContext.Provider value={{ currentUser, setCurrentUser }}>
       <NavigationContainer theme={navTheme}>
-        {user ? <AppNavigator /> : <AuthNavigator />}
+        {currentUser ? <AppNavigator /> : <AuthNavigator />}
       </NavigationContainer>
     </AuthContext.Provider>
   );
