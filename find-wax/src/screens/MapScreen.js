@@ -9,7 +9,7 @@ import useApi from './../hooks/useApi';
 
 
 
-const MapScreen = () => {
+const MapScreen = ({ navigation }) => {
   const { data: shops, error, loading, request: loadShops } = useApi(shopsApi.getShops);
 
 
@@ -42,12 +42,12 @@ const MapScreen = () => {
                 image={require('./../../assets/custom-map-marker.png')}
                 identifier={x.id}
                 key={i} >
-                  <Callout tooltip>
-                    <View>
-                      <View style={styles.bubble}>
-                        <Text style={styles.bubbleText}>{x.name}</Text>
+                  <Callout tooltip onPress={() => navigation.navigate('Shop Details', x)}>
+                      <View>
+                        <View style={styles.bubble}>
+                          <Text style={styles.bubbleText}>{x.name}</Text>
+                        </View>
                       </View>
-                    </View>
                   </Callout>
               </Marker>
             )) }
@@ -59,12 +59,12 @@ const MapScreen = () => {
 
 const styles = StyleSheet.create({
   bubble: {
-    flexDirection: 'row',
+    flexDirection: 'column',
     alignSelf: 'flex-start',
     backgroundColor: colors.white,
     borderRadius: 20,
     padding: 15,
-  },  
+  }, 
   bubbleText: {
     fontSize: 16,
     fontWeight: 'bold',
