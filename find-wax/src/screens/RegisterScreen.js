@@ -9,8 +9,7 @@ import AppButton from '../components/AppButton';
 import Screen from './../components/Screen';
 
 const validationSchema = Yup.object().shape({
-  firstName: Yup.string().required().label("First Name"),
-  lastName: Yup.string().required().label("Last Name"),
+  displayName: Yup.string().required().label("Name"),
   email: Yup.string().required().email().label("Email"),
   password: Yup.string().required().min(6).label("Password")
 })
@@ -20,21 +19,15 @@ function RegisterScreen() {
   return (
     <Screen style={styles.container}>
       <Formik
-        initialValues={{ firstName: '', lastName: '', email: '', password: '' }}
+        initialValues={{ displayName: '', email: '', password: '' }}
         onSubmit={values => registration(values)} 
         validationSchema={validationSchema} >
         { ({ handleChange, handleSubmit, errors }) => (
           <>
             <TextInput
             autoCorrect={false}
-            onChangeText={handleChange('firstName')} 
-            placeholder='First Name'
-            />
-            <Text style={{ color: 'red' }}>{errors.firstName}</Text>
-            <TextInput
-            autoCorrect={false}
-            onChangeText={handleChange('lastName')} 
-            placeholder='Last Name'
+            onChangeText={handleChange('displayName')} 
+            placeholder='Name'
             />
             <Text style={{ color: 'red' }}>{errors.lastName}</Text>
             <TextInput
