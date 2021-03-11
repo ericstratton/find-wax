@@ -19,3 +19,7 @@ Date: 03//05/2021
 
 8:00 - Watched more tutorials.
 9:30 - Started working on welcome screen.
+
+Date: 03/08/2021 - 03/10/2021
+
+Built Login/Register, Map, and Shop List screens. Implemented authorization using Google Firebase as a backend. Dynamically render custom map markers on map screen. App development is visible through my commit history.
