@@ -8,8 +8,6 @@ import navTheme from './src/nav/navTheme';
 import AuthContext from './src/auth/context';
 
 
-
-
 export default function App() {
   const [currentUser, setCurrentUser] = useState(AuthContext)
 
@@ -22,7 +20,7 @@ export default function App() {
     if (user) {
       setCurrentUser(user);
     } else {
-      console.log("Not working!");
+      console.log("Logged Out!");
     }
   });
 
