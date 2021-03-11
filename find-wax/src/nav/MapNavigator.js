@@ -8,6 +8,7 @@ const Stack = createStackNavigator();
 
 const ShopsNavigator = () => (
   <Stack.Navigator
+    mode='modal'
     screenOptions={{
       headerStyle: { backgroundColor: colors.primary },
       headerTintColor: colors.white
