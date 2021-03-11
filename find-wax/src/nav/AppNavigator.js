@@ -4,6 +4,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons'
 
 import AccountScreen from './../screens/AccountScreen';
 import MapScreen from '../screens/MapScreen';
+import MapNavigator from './MapNavigator';
 import colors from '../config/colors';
 import ShopsNavigator from './ShopsNavigator';
 
@@ -21,8 +22,9 @@ const AppNavigator = () => (
     }} >
       <Tab.Screen 
         name="Map" 
-        component={MapScreen} 
+        component={MapNavigator} 
         options={{
+          headerShown: 'false',
           tabBarIcon: ({ color, size }) => 
             <MaterialCommunityIcons name="map" color={color} size={size} />
         }}/>
