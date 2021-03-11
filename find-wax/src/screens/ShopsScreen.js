@@ -31,7 +31,7 @@ export default function ShopsScreen({ navigation }) {
               imageUrl={item.image_url}
               title={item.name}
               subTitle={item.phone} 
-              onPress={() => navigation.navigate('ShopsDetails', item)} />
+              onPress={() => navigation.navigate('Shop Details', item)} />
           )} />
       </View>
     </Screen>
