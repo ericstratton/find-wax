@@ -2,9 +2,9 @@
 
 ### _Record store locator built with Expo and React Native to simplify store discovery in new cities!, vs: 03/11/2021_
 
-### 🔆_Created by: Eric Stratton_🔆
+### _Created by: Eric Stratton_
 
-## Description
+## 🔆 Description 🔆
 
 A tool for making record store discovery more simple. Using Expo geolocation and the Yelp Fusion API, this application renders a map with custom markers at each location.
 
