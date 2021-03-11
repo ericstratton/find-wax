@@ -21,7 +21,6 @@ export default function App() {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       setCurrentUser(user);
-      console.log(currentUser);
     } else {
       console.log("Not working!");
     }
