@@ -52,7 +52,6 @@ const MapScreen = () => {
               </Marker>
             )) }
         </MapView>
-      
       </View>
     </Screen>
   );
