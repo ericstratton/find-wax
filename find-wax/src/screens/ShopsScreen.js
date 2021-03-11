@@ -8,7 +8,7 @@ import useApi from './../hooks/useApi';
 import colors from '../config/colors';
 
 
-export default function ShopsScreen() {
+export default function ShopsScreen({ navigation }) {
   const { data: shops, error, loading, request: loadShops } = useApi(shopsApi.getShops);
 
   useEffect(() => {
@@ -30,7 +30,8 @@ export default function ShopsScreen() {
             <Card
               imageUrl={item.image_url}
               title={item.name}
-              subTitle={item.phone} />
+              subTitle={item.phone} 
+              onPress={() => navigation.navigate('ShopsDetails', item)} />
           )} />
       </View>
     </Screen>
