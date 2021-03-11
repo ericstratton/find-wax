@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     width: Dimensions.get('window').width,
   },
   mapContainer: {
-    bottom: 30,
+    bottom: 40,
   },
 })
 
