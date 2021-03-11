@@ -30,7 +30,7 @@ export default function ShopsScreen({ navigation }) {
             <Card
               imageUrl={item.image_url}
               title={item.name}
-              subTitle={item.phone} 
+              subTitle={item.location.address1} 
               onPress={() => navigation.navigate('Shop Details', item)} />
           )} />
       </View>
