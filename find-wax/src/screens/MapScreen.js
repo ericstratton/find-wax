@@ -46,6 +46,7 @@ const MapScreen = ({ navigation }) => {
                       <View>
                         <View style={styles.bubble}>
                           <Text style={styles.bubbleText}>{x.name}</Text>
+                          <Text style={styles.bubbleText}>{x.location.address1}</Text>
                         </View>
                       </View>
                   </Callout>
@@ -63,7 +64,7 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
     backgroundColor: colors.white,
     borderRadius: 20,
-    padding: 15,
+    padding: 10,
   }, 
   bubbleText: {
     fontSize: 16,
