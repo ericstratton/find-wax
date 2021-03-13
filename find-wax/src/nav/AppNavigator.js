@@ -17,14 +17,12 @@ const AppNavigator = () => (
     tabBarOptions={{
       activeBackgroundColor: colors.primary,
       activeTintColor: colors.white,
-      // inactiveBackgroundColor: colors.primary,
       inactiveTintColor: colors.secondary
     }} >
       <Tab.Screen 
         name="Map" 
         component={MapNavigator} 
         options={{
-          headerShown: 'false',
           tabBarIcon: ({ color, size }) => 
             <MaterialCommunityIcons name="map" color={color} size={size} />
         }}/>
