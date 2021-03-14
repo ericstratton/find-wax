@@ -12,6 +12,14 @@ export default useLocation = () => {
         coords: { latitude, longitude },
       } = await Location.getCurrentPositionAsync();
         setLocation({ latitude, longitude });
+    } catch (error) {
+      console.log(error);
     }
-  }
+  };
+
+  useEffect(() => {
+    getLocation();
+  }, []);
+  
+  return location;
 };
