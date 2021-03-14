@@ -10,7 +10,7 @@ import colors from '../config/colors';
 
 const Stack = createStackNavigator();
 
-const SearchNavigator = () => (
+const AuthNavigator = () => (
   <Stack.Navigator
     screenOptions={{
       headerStyle: { backgroundColor: colors.primary },
@@ -26,4 +26,4 @@ const SearchNavigator = () => (
   </Stack.Navigator>
 )
 
-export default SearchNavigator;
+export default AuthNavigator;
