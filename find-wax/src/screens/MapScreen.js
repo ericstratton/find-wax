@@ -1,16 +1,18 @@
 import React, { useEffect } from 'react';
-import { ActivityIndicator, Dimensions, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, Button, Dimensions, StyleSheet, Text, View } from 'react-native';
 import MapView, { Marker, Callout } from 'react-native-maps';
 
 import Screen from '../components/Screen';
 import colors from '../config/colors';
+import useLocation from './../hooks/useLocation';
 import shopsApi from './../api/shops';
 import useApi from './../hooks/useApi';
 
 
 
 const MapScreen = ({ navigation }) => {
-  const { data: shops, error, loading, request: loadShops } = useApi(shopsApi.getShops);
+  const { latitude, longitude } = useLocation();
+  const { data: shops, error, loading, request: loadShops } = useApi(shopsApi.getShops(latitude, longitude));
 
 
   useEffect(() => {
