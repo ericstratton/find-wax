@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
-import { ActivityIndicator, Button, Dimensions, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, Dimensions, StyleSheet, Text, View } from 'react-native';
 import MapView, { Marker, Callout } from 'react-native-maps';
 
+import AppButton from'./../components/AppButton';
 import Screen from '../components/Screen';
 import colors from '../config/colors';
 import useLocation from './../hooks/useLocation';
@@ -11,29 +12,44 @@ import useApi from './../hooks/useApi';
 
 
 const MapScreen = ({ navigation }) => {
-  const { latitude, longitude } = useLocation();
-  const { data: shops, error, loading, request: loadShops } = useApi(shopsApi.getShops(latitude, longitude));
+  const location = useLocation();
+  const { data: shops, error, loading, request: loadShops } = useApi(shopsApi.getShops);
 
-
+  const resolveLocation = async (location) => {
+    const resolvedLocation = await location;
+    loadShops(resolvedLocation);
+  }
+  
   useEffect(() => {
-    loadShops();
+    resolveLocation(location);
   }, []);
-
+  
   return (
     <Screen style={styles.container}>
+      { location ?
       <View style={styles.mapContainer} >
-        {error && (<>
-          <Text>Couldn't retrieve data.</Text>
-          <Button title="Retry" onPress={loadShops}/>
-        </>)}
+        <View style={styles.errorContainer}>
+          {error && (<>
+            <Text>Couldn't retrieve data.</Text>
+            <AppButton title="Retry" onPress={handleLoadingMarkers}/>
+          </>)}
+        </View>
+          {/* <View style={styles.errorContainer}>
+            <AppButton title='Load Shops' onPress={handleLoadingMarkers} />
+          </View>  */}
         <ActivityIndicator animating={loading} size='large' />
         <MapView style={styles.map}
           initialRegion={{
-            latitude: 45.520421,
-            longitude: -122.668319,
+            latitude: location.latitude,
+            longitude: location.longitude,
             latitudeDelta: 0.07,
             longitudeDelta: 0.15, 
             }}> 
+            {/* <Marker 
+              coordinate={{
+              latitude: location.latitude,
+              longitude: location.longitude
+              }} /> */}
           { shops.businesses  &&
             shops.businesses.map((x, i) => (
               <Marker 
@@ -55,8 +71,12 @@ const MapScreen = ({ navigation }) => {
               </Marker>
             )) }
         </MapView>
-      </View>
-    </Screen>
+      </View> 
+      :
+        <View style={styles.locationContainer}>
+          <Text style={styles.locationLoadingText}>Getting Location</Text>
+        </View>  } 
+    </Screen> 
   );
 };
 
@@ -84,9 +104,19 @@ const styles = StyleSheet.create({
     alignContent: 'center', 
     flexWrap: 'wrap'
   },
+  errorContainer: {
+    position: 'absolute',
+    alignSelf: 'center',
+    top: '50%',
+  },
+  locationLoadingText: {
+    fontSize: 18,
+    fontWeight: 'bold'
+  },
   map: {
     height: Dimensions.get('window').height,
     width: Dimensions.get('window').width,
+    zIndex: -1,
   },
   mapContainer: {
     bottom: 40,
