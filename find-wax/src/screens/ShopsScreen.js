@@ -6,13 +6,20 @@ import Button from './../components/AppButton';
 import shopsApi from './../api/shops';
 import useApi from './../hooks/useApi';
 import colors from '../config/colors';
+import useLocation from '../hooks/useLocation';
 
 
 export default function ShopsScreen({ navigation }) {
+  const location = useLocation();
   const { data: shops, error, loading, request: loadShops } = useApi(shopsApi.getShops);
 
+  const resolveLocation = async (location) => {
+    const resolvedLocation = await location;
+    loadShops(resolvedLocation);
+  }
+  
   useEffect(() => {
-    loadShops();
+    resolveLocation(location);
   }, []);
 
   return (
