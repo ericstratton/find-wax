@@ -45,11 +45,11 @@ const MapScreen = ({ navigation }) => {
             latitudeDelta: 0.07,
             longitudeDelta: 0.15, 
             }}> 
-            {/* <Marker 
+            <Marker 
               coordinate={{
               latitude: location.latitude,
               longitude: location.longitude
-              }} /> */}
+              }} />
           { shops.businesses  &&
             shops.businesses.map((x, i) => (
               <Marker 
