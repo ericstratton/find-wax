@@ -23,7 +23,7 @@ const MapScreen = ({ navigation }) => {
   
   useEffect(() => {
     resolveLocation(location);
-  }, []);
+  }, [location]);
 
   return (
     <Screen style={styles.container}>
