@@ -84,6 +84,6 @@ Do not hesitate to contact me at:
 
 ## Licensing
 
-Copyright (C) 2020 **_Eric Stratton_**
+Copyright (C) 2021 **_Eric Stratton_**
 
 This software is licensed under the MIT license.
