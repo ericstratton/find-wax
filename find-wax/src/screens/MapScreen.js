@@ -17,12 +17,14 @@ const MapScreen = ({ navigation }) => {
 
   const resolveLocation = async (location) => {
     const resolvedLocation = await location;
+    console.log(resolvedLocation); // loadShops still being called when resolvedLocation is undefined.. why?
     loadShops(resolvedLocation);
   }
   
   useEffect(() => {
     resolveLocation(location);
-  }, []);
+  }, [location]);
+
   
   return (
     <Screen style={styles.container}>
