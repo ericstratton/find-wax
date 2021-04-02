@@ -17,7 +17,6 @@ const MapScreen = ({ navigation }) => {
 
   const resolveLocation = async (location) => {
     const resolvedLocation = await location;
-    console.log(resolvedLocation); // loadShops still being called when resolvedLocation is undefined.. why?
     loadShops(resolvedLocation);
   }
   
@@ -32,7 +31,7 @@ const MapScreen = ({ navigation }) => {
         <View style={styles.errorContainer}>
           {error && (<>
             <Text>Couldn't retrieve data.</Text>
-            <AppButton title="Retry" onPress={handleLoadingMarkers}/>
+            <AppButton title="Retry" onPress={resolveLocation}/>
           </>)}
         </View>
           {/* <View style={styles.errorContainer}>
@@ -69,14 +68,15 @@ const MapScreen = ({ navigation }) => {
                         </View>
                       </View>
                   </Callout>
-              </Marker>
-            )) }
+              </Marker> 
+              )) }
         </MapView>
       </View> 
-      :
+      :  
         <View style={styles.locationContainer}>
           <Text style={styles.locationLoadingText}>Getting Location</Text>
-        </View>  } 
+        </View>   
+        } 
     </Screen> 
   );
 };
